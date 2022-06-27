@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: macos <macos@student.42.fr>                +#+  +:+       +#+         #
+#    By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/21 01:03:59 by zcherrad          #+#    #+#              #
-#    Updated: 2022/06/27 16:35:20 by macos            ###   ########.fr        #
+#    Updated: 2022/06/27 23:09:57 by zcherrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ LIB		= libft/libft.a
 CHECKER = checker
 CC		= cc
 INC 	= include/push_swap.h
-CFLAG	=  -g3 -fsanitize=address
+CFLAG	= -g3 -fsanitize=address
 SRC		= 	src/main.c\
 			src/actions.c\
 			src/actions_1.c\
@@ -26,11 +26,11 @@ SRC		= 	src/main.c\
 			src/check_arr.c	\
 			src/check_tab.c
 			
-# C_SRC = checker/checker.c\
-# 		src/actions.c\
-# 		src/actions_1.c\
-# 		src/actions_2.c\
-# 		src/check_tab.c\
+C_SRC = checker/checker.c\
+		src/actions.c\
+		src/actions_1.c\
+		src/actions_2.c\
+		src/check_tab.c\
 
 #OBJ		= $(SRC:.c=.o)
 
@@ -44,7 +44,8 @@ $(NAME): $(LIB) $(SRC)
 $(LIB): libft/
 		make -C libft
 
-# $(CHECKER): $(LIB) $(C_SRC)
+$(CHECKER): $(LIB) $(C_SRC)
+		$(CC) $(CFLAG) -I $(INC) $(C_SRC) $(LIB) -o $(CHECKER)
 
 
 clean:

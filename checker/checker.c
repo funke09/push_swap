@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/27 23:02:01 by zcherrad          #+#    #+#             */
+/*   Updated: 2022/06/27 23:17:40 by zcherrad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
@@ -14,6 +25,17 @@
 // 	else
 // 		ft_putstr("Error\n");
 //}
+void	ft_exit(t_data *global, int i)
+{
+	ft_putstr_fd("Error\n", 2);
+	if (i == 1)
+	{
+		free(global->tab[0]);
+		free(global->tab[1]);
+		free(global->tab);
+	}
+	exit(1);
+}
 
 void	check_stacks(t_data global)
 {
@@ -37,24 +59,22 @@ void	check_stacks(t_data global)
 		else if (!ft_strcmp("pb\n", str))
 			pb(&global);
 		else if (!ft_strcmp("pa\n", str))
- 		    pa(&global);
-        else
-            ft_putstr_fd("Error\n",1);
+			pa(&global);
+		else
+			ft_putstr_fd("Error\n", 1);
 		str = get_next_line(0);
 	}
 }
 
-int main (int ac , char **av)
+int	main(int ac, char **av)
 {
-    t_data global;
+	t_data	global;
 
-
-    if (ac <= 2)
-        return (0);
-    check_stacks(global);
-    if (ordre_checker(&global) && global.len_b == 0)
-        ft_putstr_fd("OK", 1);
-    else
-        ft_putstr_fd("KO", 1);
-
+	if (ac <= 2)
+		return (0);
+	check_stacks(global);
+	if (ordre_checker(&global) && global.len_b == 0)
+		ft_putstr_fd("OK", 1);
+	else
+		ft_putstr_fd("KO", 1);
 }
