@@ -3,14 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: macos <macos@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 23:02:01 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/06/27 23:17:40 by zcherrad         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:44:35 by macos            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	 debug(t_data *global)
+{
+	int i;
+
+	ft_putstr_fd("dkhlt", 2);
+	i = 0;
+	while(i < global->len_a)
+	{
+		ft_putnbr_fd(global->tab[0][i], 1);
+		i++;
+	}
+}
 
 // void	check2(t_list **a, t_list **b, char *str)
 // {
@@ -45,21 +58,21 @@ void	check_stacks(t_data global)
 	while (str)
 	{
 		if (!ft_strcmp("rra\n", str))
-			rra(&global);
+			rra_bonus(&global);
 		else if (!ft_strcmp("ra\n", str))
-			ra(&global);
+			ra_bonus(&global);
 		else if (!ft_strcmp("sa\n", str))
-			sa(&global);
+			sa_bonus(&global);
 		else if (!ft_strcmp("rrb\n", str))
-			rrb(&global);
+			rrb_bonus(&global);
 		else if (!ft_strcmp("rb\n", str))
-			rb(&global);
+			rb_bonus(&global);
 		else if (!ft_strcmp("sb\n", str))
-			sb(&global);
+			sb_bonus(&global);
 		else if (!ft_strcmp("pb\n", str))
-			pb(&global);
+			pb_bonus(&global);
 		else if (!ft_strcmp("pa\n", str))
-			pa(&global);
+			pa_bonus(&global);
 		else
 			ft_putstr_fd("Error\n", 1);
 		str = get_next_line(0);
@@ -71,10 +84,13 @@ int	main(int ac, char **av)
 	t_data	global;
 
 	if (ac <= 2)
-		return (0);
+		return (1);
+	full_stack(global,);
 	check_stacks(global);
-	if (ordre_checker(&global) && global.len_b == 0)
+	debug(&global);
+	if (ordre_checker_bonus(&global) && global.len_b == 0)
 		ft_putstr_fd("OK", 1);
 	else
 		ft_putstr_fd("KO", 1);
+	return (0);
 }

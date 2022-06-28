@@ -6,7 +6,7 @@
 /*   By: macos <macos@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 16:53:38 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/06/25 18:35:24 by macos            ###   ########.fr       */
+/*   Updated: 2022/06/28 03:29:50 by macos            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,24 @@ void	pa_rra(t_data *global);
 void	pa_rb(t_data *global);
 void	pb_rrb(t_data *global);
 void	pb_ra(t_data *global);
+// ---------------------------
+void	sa_bonus(t_data *global);
+void	sb_bonus(t_data *global);
+void	ss_bonus(t_data *global);
+void	pa_bonus(t_data *global);
+void	pb_bonus(t_data *global);
+void	ra_bonus(t_data *global);
+void	rb_bonus(t_data *global);
+void	rr_bonus(t_data *global);
+void	rra_bonus(t_data *global);
+void	rrb_bonus(t_data *global);
+void	pa_rra_bonus(t_data *global);
+void	pa_rb_bonus(t_data *global);
+void	pb_rrb_bonus(t_data *global);
+void	pb_ra_bonus(t_data *global);
+int		ordre_checker_bonus(t_data *global);
 /*push_swap.c*/
-void	manage_algo(t_data *global);
 void	ft_exit(t_data *global, int i);
+void	manage_algo(t_data *global);
 
 #endif
