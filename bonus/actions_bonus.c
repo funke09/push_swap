@@ -1,5 +1,16 @@
-#include "../include/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   actions_bonus.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 21:07:03 by zcherrad          #+#    #+#             */
+/*   Updated: 2022/06/28 21:11:58 by zcherrad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "../include/checker.h"
 
 void	sa_bonus(t_data *global)
 {
@@ -68,6 +79,6 @@ void	pb_bonus(t_data *global)
 	global->len_b++;
 	pb_rrb_bonus(global);
 	global->tab[1][0] = global->tab[0][0];
-    pb_ra_bonus(global);
+	pb_ra_bonus(global);
 	global->len_a--;
 }

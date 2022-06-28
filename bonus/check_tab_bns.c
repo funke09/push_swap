@@ -1,4 +1,16 @@
-#include "../include/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_tab_bns.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 21:03:39 by zcherrad          #+#    #+#             */
+/*   Updated: 2022/06/28 21:08:47 by zcherrad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/checker.h"
 
 int	put_argv_in_tab_bns(char *global, int *tab, int j)
 {

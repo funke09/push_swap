@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macos <macos@student.42.fr>                +#+  +:+       +#+        */
+/*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 16:53:38 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/06/28 03:29:50 by macos            ###   ########.fr       */
+/*   Updated: 2022/06/28 21:06:37 by zcherrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -23,7 +22,6 @@
 
 # define MAX_INT 2147483647
 # define MIN_INT -2147483648
-
 
 typedef struct s_data
 {
@@ -82,22 +80,6 @@ void	pa_rra(t_data *global);
 void	pa_rb(t_data *global);
 void	pb_rrb(t_data *global);
 void	pb_ra(t_data *global);
-// ---------------------------
-void	sa_bonus(t_data *global);
-void	sb_bonus(t_data *global);
-void	ss_bonus(t_data *global);
-void	pa_bonus(t_data *global);
-void	pb_bonus(t_data *global);
-void	ra_bonus(t_data *global);
-void	rb_bonus(t_data *global);
-void	rr_bonus(t_data *global);
-void	rra_bonus(t_data *global);
-void	rrb_bonus(t_data *global);
-void	pa_rra_bonus(t_data *global);
-void	pa_rb_bonus(t_data *global);
-void	pb_rrb_bonus(t_data *global);
-void	pb_ra_bonus(t_data *global);
-int		ordre_checker_bonus(t_data *global);
 /*push_swap.c*/
 void	ft_exit(t_data *global, int i);
 void	manage_algo(t_data *global);

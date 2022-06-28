@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: macos <macos@student.42.fr>                +#+  +:+       +#+         #
+#    By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/21 01:03:59 by zcherrad          #+#    #+#              #
-#    Updated: 2022/06/28 20:57:33 by macos            ###   ########.fr        #
+#    Updated: 2022/06/28 21:25:01 by zcherrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ C_SRC = bonus/checker.c\
 		bonus/actions_bonus1.c\
 		bonus/actions_bonus2.c\
 		bonus/check_tab_bns.c\
+		bonus/manage_arg.c\
 
 #OBJ		= $(SRC:.c=.o)
 

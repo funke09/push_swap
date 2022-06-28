@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macos <macos@student.42.fr>                +#+  +:+       +#+        */
+/*   By: zcherrad <zcherrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 23:02:01 by zcherrad          #+#    #+#             */
-/*   Updated: 2022/06/28 17:44:35 by macos            ###   ########.fr       */
+/*   Updated: 2022/06/28 21:26:36 by zcherrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../include/checker.h"
 
-void	 debug(t_data *global)
+void	debug(t_data *global)
 {
-	int i;
+	int	i;
 
 	ft_putstr_fd("dkhlt", 2);
 	i = 0;
-	while(i < global->len_a)
+	while (i < global->len_a)
 	{
 		ft_putnbr_fd(global->tab[0][i], 1);
 		i++;
@@ -83,9 +83,12 @@ int	main(int ac, char **av)
 {
 	t_data	global;
 
-	if (ac <= 2)
-		return (1);
-	full_stack(global,);
+	global.argc = ac;
+	global.argv = av;
+	if (global.argc < 1)
+		ft_exit(&global, 0);
+	check_len_argv(&global); // 
+	full_stack(&global, 0);
 	check_stacks(global);
 	debug(&global);
 	if (ordre_checker_bonus(&global) && global.len_b == 0)
